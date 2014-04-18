@@ -272,7 +272,7 @@
 
     const-string v7, "status_bar_show_battery_percent"
 
-    const/4 v8, 0x0
+    const/4 v8, 0x1
 
     invoke-static {v6, v7, v8}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -388,12 +388,12 @@
     .line 208
     iget-object v6, p0, Lcom/android/systemui/BatteryMeterView;->mTextPaint:Landroid/graphics/Paint;
 
-    const/4 v7, -0x1
+    const/high16 v7, -0x100
 
     invoke-virtual {v6, v7}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 209
-    const-string v6, "sans-serif-condensed"
+    const-string v6, "sans-serif"
 
     const/4 v7, 0x0
 
